@@ -7,6 +7,11 @@ body {
     font-size: 20px;
 }
 
+hr {
+    size: 5px;
+    color: black;
+}
+
 h2 {
     font-family: Roboto, Arial, Helvetica, sans-serif;
     font-size: 30px;
@@ -35,7 +40,6 @@ h2 {
 .item-price {
     font-size: 22px;
     font-weight: 500;
-
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -45,4 +49,14 @@ button {
     border-width: 2px;
     border-color: black;
     padding: 10px;
+    font-size: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bolder;
+}
+
+.small-font {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 14px;
 }
