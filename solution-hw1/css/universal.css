@@ -8,8 +8,7 @@ body {
 }
 
 hr {
-    size: 5px;
-    color: black;
+    border: 3px solid black;
 }
 
 h2 {
