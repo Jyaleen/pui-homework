@@ -41,4 +41,5 @@
 
 .item:hover {
     background-color: yellow;
+    cursor: pointer;
 }
