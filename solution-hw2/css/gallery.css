@@ -1,17 +1,19 @@
 .items {
     margin: auto;
-    width: 50%;
     padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .item {
-    width: 450px;
+    width: 350px;
     height: auto;
     padding: 25px;
     box-sizing: border-box;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 50px;
 }
 
 .item a {
@@ -19,8 +21,7 @@
 }
 
 .item-thumbnail {
-    width: 400px;
-    height: 400px;
+    width: 285px;
     border-radius: 5px;
     border: solid 3px black;
 }
