@@ -1,4 +1,4 @@
-.item {
+/* .item {
     width: 600px;
     height: auto;
     padding: 25px;
@@ -6,9 +6,10 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
+} */
 
 .item-thumbnail {
+    margin-left: 10%;
     width: 600px;
     border-radius: 5px;
     border: solid 3px black;
@@ -43,4 +44,12 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top: 80px;
+}
+
+.detail-left {
+    width: 50%;
+}
+
+.detail-right {
+    width: 50%;
 }

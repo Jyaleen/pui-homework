@@ -21,5 +21,25 @@
     margin-top: 10px;
     padding-left: 130px;
     padding-right: 130px;
-    text-align: center;
+    font-size: 22px;
+    /* text-align: center; */
+}
+
+.column {
+    float: left;
+    padding: 10px;
+    height: 300px;
+}
+
+.left {
+    margin-left: 400px;
+}
+
+.left,
+.right {
+    width: 25%;
+}
+
+.middle {
+    width: 50%;
 }
