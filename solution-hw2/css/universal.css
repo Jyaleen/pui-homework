@@ -9,6 +9,7 @@ body {
 
 hr {
     border: 3px solid black;
+    width: 100%;
 }
 
 h2 {
@@ -18,12 +19,33 @@ h2 {
     font-weight: lighter;
 }
 
+.head {
+    /* box-sizing: border-box; */
+    display: flex;
+    flex-direction: row;
+    /* width: auto; */
+    align-items: center;
+}
+
+.header-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
 .pagination {
     font-size: 20px;
     font-weight: 500;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    box-sizing: border-box;
+    display: flex;
+    width: auto;
+}
+
+.pag {
+    flex-grow: 1;
 }
 
 .pagination a {
