@@ -72,7 +72,8 @@ h2 {
 .item-price {
     font-size: 22px;
     font-weight: 500;
-    margin-top: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 button {
@@ -96,4 +97,11 @@ button:hover {
 .small-font {
     font-family: Roboto, Arial, Helvetica, sans-serif;
     font-size: 14px;
+}
+
+.side-by-side {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 80px;
 }

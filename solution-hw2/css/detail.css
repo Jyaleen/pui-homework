@@ -39,13 +39,6 @@
     background-size: 0.65rem auto; */
 }
 
-.side-by-side {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 80px;
-}
-
 .detail-left {
     width: 50%;
 }
