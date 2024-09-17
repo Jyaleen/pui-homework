@@ -8,12 +8,9 @@
 }
 
 .item {
-    /* width: 350px;
-    height: 430px; */
     padding: 27px;
     box-sizing: border-box;
     display: block;
-    /* margin: 50px; */
 }
 
 .item a {
