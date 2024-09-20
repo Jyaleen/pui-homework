@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/universal.css">
+    <link rel="stylesheet" type="text/css" href="css/detail.css">
+    <script defer src="app.js"></script>
+    <title>Bun Bun Bake Shop</title>
+</head>
+
+<body>
+
+    <body>
+
+        <h2>Learn About Cars</h2>
+        <!-- We are using integer values for each option in the select. So
+             no matter what name we put between the <option> tags, the
+             select's value property will be the number. BUT the value is
+             in string format, so we need to convert it to an integer in
+             JavaScript. -->
+        <!-- We could also use unique string identifiers here like "toyota",
+             "vw", "chevy", etc. Either way, it's good practice to make sure
+             these values are unique. -->
+        <select id="car-select">
+            <option value="0">Toyota Corolla</option>
+            <option value="1">VW Beetle</option>
+            <option value="2">Chevy Corvette</option>
+        </select>
+        <h4 id="car-title">none</h4>
+        <p id="car-info"></p>
+
+    </body>
+
+    <br><br><br><br>
+    <div class="pagination">
+        <div class="side-by-side">
+            <a href="./index.html">
+                <img class="logo" src="../assets/logo/logo-01.svg" alt="bun bun bake shop logo">
+            </a>
+            <div class="flex-grow">
+                <div class="side-by-side float-right pag-a">
+                    <a href="./index.html">
+                        <h3 class="other-pagination pag">PRODUCTS</h3>
+                    </a>
+                    <br>
+                    <br>
+                    <a href="./cart.html">
+                        <h3 class="bold current-pagination pag">CART</h3>
+                    </a>
+                </div>
+                <hr>
+                <h2>Original cinnamon roll</h2>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="row">
+        <div class="column detail-left">
+            <img class="item-thumbnail" src="../assets/products/original-cinnamon-roll.jpg"
+                alt="Original cinnamon roll">
+        </div>
+        <div class="column detail-right">
+            <div class="item-body">
+                Customize our delicious, hand-made cinammon roll to your liking!
+                <br><br><br><br>
+                <!-- Glazing:
+                <br>
+                <select class="custom-select" name="glazing">
+                    <option value="keep-original">Keep original</option>
+                    <option value="sugar-milk">Sugar milk</option>
+                    <option value="vanilla-milk">Vanilla milk</option>
+                    <option value="double-choco">Double chocolate</option>
+                </select>
+                <br><br> -->
+                H3 Glazing:
+                <br>
+                <!-- <select class="custom-select" id="glazingOptions" onchange="glazingChange(this)">
+
+
+
+
+                </select> -->
+                <select class="custom-select" id="glazingOptions">
+
+
+
+
+                </select>
+                <br><br>
+                Pack size:
+                <br>
+                <select class="custom-select" name="pack-size">
+                    <option value="1">1</option>
+                    <option value="3">3</option>
+                    <option value="6">6</option>
+                    <option value="12">12</option>
+                </select>
+                <div class="side-by-side">
+                    <div class="item-price" id="price">
+                        <p>$ 2.49</p>
+                    </div>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
