@@ -1,3 +1,6 @@
+/*
+    The glaze options and their price adaptations
+*/
 let allGlaze = [
     {
         glazing: 'Keep original',
@@ -17,6 +20,9 @@ let allGlaze = [
     }
 ];
 
+/*
+    The pack size options and their price adaptations
+*/
 let allPack = [
     {
         packSize: 1,
@@ -64,22 +70,36 @@ let packPrice = allPack[0].priceAdaptation;
 glazeSelect.addEventListener('change', onGlazeSelectValueChange);
 packSelect.addEventListener('change', onPackSelectValueChange);
 
-
+/*
+    Starts the calculation process when the glaze select value changes
+*/
 function onGlazeSelectValueChange() {
     glazePrice = parseFloat(this.value);
     calculatePrice(glazePrice, packPrice);
 }
 
+/*
+    Starts the calculation process when the pack size select value changes
+*/
 function onPackSelectValueChange() {
     packPrice = this.value;
     calculatePrice(glazePrice, packPrice);
 }
 
+/*
+    Calculates the price of a given glaze and pack size combination
+    Parameters:
+        - gl: glaze
+        - pa: price adaptation
+*/
 function calculatePrice(gl, pa) {
     price = ((basePrice + gl) * pa).toFixed(2); //source: https://stackoverflow.com/questions/3163070/javascript-displaying-a-float-to-2-decimal-places
     displayPrice();
 }
 
+/*
+    Displays the global price variable
+*/
 function displayPrice() {
     let priceElement = document.querySelector('#price');
     priceElement.innerText = "$ " + price;
