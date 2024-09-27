@@ -1,3 +1,10 @@
+let cart = [];
+
+const queryString = window.location.search;
+const params = new URLSearchParams(queryString);
+const rollType = params.get('roll');
+
+
 /*
     The glaze options and their price adaptations
 */

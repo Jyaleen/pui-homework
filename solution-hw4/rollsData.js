@@ -24,3 +24,13 @@ const rolls = {
         "imageFile": "strawberry-cinnamon-roll.jpg"
     }
 };
+
+console.log(rolls);
+const selectedRoll = rolls[rollType];
+
+const headerElement = document.querySelector('#roll-header-text');
+headerElement.innerText = rollType + ' Cinnamon Roll';
+
+const rollImage = document.querySelector('#roll-detail-img');
+rollImage.src = "../assets/products/" + selectedRoll.imageFile;
+

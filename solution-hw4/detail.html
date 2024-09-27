@@ -5,7 +5,9 @@
 <head>
     <link rel="stylesheet" type="text/css" href="css/universal.css">
     <link rel="stylesheet" type="text/css" href="css/detail.css">
-    <script defer src="app.js"></script>
+    <script defer src="detail.js"></script>
+    <script defer src="rollsData.js"></script>
+
     <title>Bun Bun Bake Shop</title>
 </head>
 
@@ -27,7 +29,7 @@
                     </a>
                 </div>
                 <hr>
-                <h2>Original cinnamon roll</h2>
+                <h2 id="roll-header-text">Original cinnamon roll</h2>
             </div>
         </div>
     </div>
@@ -36,8 +38,7 @@
 
     <div class="row">
         <div class="column detail-left">
-            <img class="item-thumbnail" src="../assets/products/original-cinnamon-roll.jpg"
-                alt="Original cinnamon roll">
+            <img id="roll-detail-img" class="item-thumbnail" src="" alt="Original cinnamon roll">
         </div>
         <div class="column detail-right">
             <div class="item-body">
