@@ -142,12 +142,22 @@ function displayPrice() {
     Adds the roll (with glaze and pack size specifications) to the cart
 */
 function onAddToCart() {
+    const thisGlaze = document.querySelector('#glazingOptions');
+    const glazeValue = thisGlaze.options[thisGlaze.selectedIndex];
+
+    const thisPack = document.querySelector('#packOptions');
+    const packValue = thisPack.options[thisPack.selectedIndex];
+
+    const glazeText = glazeValue.text;
+    const packText = packValue.text;
+
     const newCartItem = new Roll(
         rollType,
-        glazeSelect.text,
-        packSelect,
+        glazeText,
+        packText,
         basePrice
     );
+
     cart.push(newCartItem);
     console.log(cart);
 }
