@@ -5,9 +5,8 @@
 <head>
     <link rel="stylesheet" type="text/css" href="css/universal.css">
     <link rel="stylesheet" type="text/css" href="css/detail.css">
-    <script defer src="detail.js"></script>
-    <script defer src="rollsData.js"></script>
-
+    <script defer src="js/rollsData.js"></script>
+    <script defer src="js/detail.js"></script>
     <title>Bun Bun Bake Shop</title>
 </head>
 
@@ -29,7 +28,7 @@
                     </a>
                 </div>
                 <hr>
-                <h2 id="roll-header-text">Original cinnamon roll</h2>
+                <h2 id="roll-header-text"></h2>
             </div>
         </div>
     </div>
@@ -57,9 +56,9 @@
                 </select>
                 <div class="side-by-side">
                     <div class="item-price" id="price">
-                        <p>$ 2.49</p>
+                        <p id="roll-price"></p>
                     </div>
-                    <button>Add to Cart</button>
+                    <button id="add-to-cart-btn">Add to Cart</button>
                 </div>
             </div>
         </div>
