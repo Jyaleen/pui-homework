@@ -11,21 +11,17 @@ const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const rollType = params.get("roll");
 const selectedRoll = rolls[rollType];
-const cart = [];
 
 /*
     The glaze options and their price adaptations
 */
+
 const allGlaze = {
     'Keep original': 0,
     'Sugar milk': 0,
     'Vanilla milk': 0.5,
     'Double chocolate': 1.5,
 };
-
-/*
-    The pack size options and their price adaptations
-*/
 const allPack = {
     1: 1,
     3: 3,
@@ -33,18 +29,24 @@ const allPack = {
     12: 10,
 };
 
-var glazeSelect = document.querySelector("#glazingOptions");
+/*
+    The pack size options and their price adaptations
+*/
+
+
+let glazeSelect = document.querySelector("#glazingOptions");
 
 for (const glaze in allGlaze) {
-    let element = document.createElement("option");
+    var element = document.createElement("option");
     element.text = glaze;
     element.value = allGlaze[glaze];
     glazeSelect.add(element);
 }
 
-var packSelect = document.querySelector("#packOptions");
+let packSelect = document.querySelector("#packOptions");
 
 for (const pack in allPack) {
+    console.log(pack);
     let element = document.createElement("option");
     element.text = pack;
     element.value = allPack[pack];
@@ -53,9 +55,8 @@ for (const pack in allPack) {
 
 let basePrice = selectedRoll.basePrice;
 let price = basePrice;
-let glazePrice = allGlaze[0];
-let packPrice = allPack[0];
-
+let glazePrice = Object.values(allGlaze)[0]; //https://stackoverflow.com/questions/983267/how-to-access-the-first-property-of-a-javascript-object
+let packPrice = Object.values(allPack)[0];
 
 /*
     Populate the elements on the page with the specific cinnamon roll selection info
@@ -90,7 +91,7 @@ function onGlazeSelectValueChange() {
     Starts the calculation process when the pack size select value changes
 */
 function onPackSelectValueChange() {
-    packPrice = this.value;
+    packPrice = parseFloat(this.value);
     calculatePrice(glazePrice, packPrice);
 }
 
@@ -135,4 +136,51 @@ function onAddToCart() {
 
     cart.push(newCartItem);
     console.log(cart);
+}
+
+const cart = new Set();
+
+function updateRoll(roll) {
+    const rollImageElement = roll.element.querySelector('.item-thumbnail');
+    const rollTypeElement = roll.element.querySelector('#roll-type');
+    const rollGlazingElement = roll.element.querySelector('#glaze-type');
+    const rollPackElement = roll.element.querySelector('#pack-size');
+    const rollPriceElement = roll.element.querySelector('.item-price');
+
+    rollImageElement.src = '../assets/products/' + rolls[roll.type]["imageFile"];
+    rollImageElement.alt = rolls[roll.type]["alt"];
+    rollTypeElement.innerText = roll.type + " Cinnamon Roll";
+    rollGlazingElement.innerText = "Glazing: " + roll.glazing;
+    rollPackElement.innerText = "Pack Size: " + roll.size;
+}
+
+function createRoll(roll) {
+    const template = document.querySelector('#roll-template');
+    const clone = template.content.cloneNode(true);
+
+    roll.element = clone.querySelector('.item');
+
+    const btnRemove = roll.element.querySelector(".remove");
+    btnRemove.addEventListener('click', () => {
+        removeRoll(roll);
+    });
+
+    const cartElement = document.querySelector("#item-list");
+    cartElement.prepend(roll.element);
+
+    updateRoll(roll);
+}
+
+const roll1 = new Roll("Original", "Sugar Milk", 1, 2.49);
+const roll2 = new Roll("Walnut", "Vanilla Milk", 12, 3.49);
+const roll3 = new Roll("Raisin", "Sugar Milk", 3, 2.99);
+const roll4 = new Roll("Apple", "Keep Original", 3, 3.49);
+
+cart.add(roll1);
+cart.add(roll2);
+cart.add(roll3);
+cart.add(roll4);
+
+for (const roll of cart) {
+    createRoll(roll);
 }

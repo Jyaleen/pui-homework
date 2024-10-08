@@ -5,6 +5,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="css/universal.css">
     <link rel="stylesheet" href="css/cart.css">
+    <script defer src="js/rollsData.js"></script>
     <title>Bun Bun Bake Shop</title>
 </head>
 
@@ -34,56 +35,58 @@
 
     <div id="container">
         <div id="item-list">
-            <div class="item">
-                <div class="item-left">
-                    <div class="item-main-content">
-                        <img class="item-thumbnail" src="../assets/products/original-cinnamon-roll.jpg"
-                            alt="Original Cinnamon Roll">
-                        <div class="item-container">
-                            <div>
-                                <br>
-                                Original cinnamon roll
-                                <br><br>
-                                Glazing: Keep original
-                                <br><br>
-                                Pack size: 1
+            <template id="roll-template">
+                <div class="item">
+                    <div class="item-left">
+                        <div class="item-main-content">
+                            <img class="item-thumbnail" src="../assets/products/original-cinnamon-roll.jpg"
+                                alt="Original Cinnamon Roll">
+                            <div class="item-container">
+                                <div>
+                                    <br>
+                                    <span id="roll-type">Original cinnamon roll</span>
+                                    <br><br>
+                                    <span id="glaze-type">Glazing: Keep original</span>
+                                    <br><br>
+                                    <span id="pack-size">Pack size: 1</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="item-right">
-                    $ 2.49
+                    <div class="item-right item-price">
+                        $ 2.49
+                    </div>
                 </div>
-            </div>
-            <div class="remove">
-                Remove
-            </div>
-            <div class="item">
-                <div class="item-left">
-                    <div class="item-main-content">
-                        <img class="item-thumbnail" src="../assets/products/double-chocolate-cinnamon-roll.jpg"
-                            alt="double chocolate cinnamon roll">
-                        <div class="item-container">
-                            <div>
-                                <br>
-                                Double Chocolate Cinnamon Roll
-                                <br><br>
-                                Glazing: Sugar milk
-                                <br><br>
-                                Pack size: 6
+                <div class="remove">
+                    Remove
+                </div>
+                <!-- <div class="item">
+                    <div class="item-left">
+                        <div class="item-main-content">
+                            <img class="item-thumbnail" src="../assets/products/double-chocolate-cinnamon-roll.jpg"
+                                alt="double chocolate cinnamon roll">
+                            <div class="item-container">
+                                <div>
+                                    <br>
+                                    Double Chocolate Cinnamon Roll
+                                    <br><br>
+                                    Glazing: Sugar milk
+                                    <br><br>
+                                    Pack size: 6
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="item-right">
-                    $ 27.45
+                    <div class="item-right">
+                        $ 27.45
+                    </div>
                 </div>
-            </div>
-            <div class="remove">
-                Remove
-            </div>
+                <div class="remove">
+                    Remove
+                </div> -->
+            </template>
             <br>
             <hr>
             <div class="side-by-side total">
