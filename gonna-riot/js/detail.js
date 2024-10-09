@@ -1,24 +1,3 @@
-/*
-    The glaze options and their price adaptations
-*/
-const allGlaze = {
-    'Keep original': 0,
-    'Sugar milk': 0,
-    'Vanilla milk': 0.5,
-    'Double chocolate': 1.5,
-};
-
-/*
-    The pack size options and their price adaptations
-*/
-const allPack = {
-    1: 1,
-    3: 3,
-    6: 5,
-    12: 10,
-};
-
-
 let glazeSelect = document.querySelector("#glazingOptions");
 
 for (const glaze in allGlaze) {
@@ -89,4 +68,3 @@ function displayPrice() {
     let priceElement = document.querySelector('#price');
     priceElement.innerText = "$ " + price;
 }
-
