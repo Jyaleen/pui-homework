@@ -1,3 +1,6 @@
+/*
+    Creates a new roll and adds it to the DOM
+*/
 function createRoll(roll) {
     const template = document.querySelector('#roll-template');
     const clone = template.content.cloneNode(true);
@@ -16,6 +19,9 @@ function createRoll(roll) {
     updateRoll(roll);
 }
 
+/*
+    Updates the DOM element with the given roll's information
+*/
 function updateRoll(roll) {
     const rollImageElement = roll.element.querySelector('.item-thumbnail');
     const rollTypeElement = roll.element.querySelector('#roll-type');
@@ -34,6 +40,9 @@ function updateRoll(roll) {
     getTotalPrice();
 }
 
+/*
+    Gets the price of the single given roll
+*/
 function getPrice(roll) {
     const glazePrice = allGlaze[roll.glazing];
     const packPrice = allPack[roll.size];
@@ -41,6 +50,9 @@ function getPrice(roll) {
     return parseFloat(price);
 }
 
+/*
+    Gets the total price of all rolls
+*/
 function getTotalPrice() {
     let total = 0;
     for (const roll of cart) {
@@ -50,12 +62,18 @@ function getTotalPrice() {
     displayTotalPrice(total);
 }
 
+/*
+    Displays the given price
+*/
 function displayTotalPrice(total) {
     const cartPriceElement = document.querySelector("#total-price");
     cartPriceElement.innerText = "$ " + total.toFixed(2);
 
 }
 
+/*
+    Removes the given roll from the DOM and deletes it from the cart, refreshing the total price
+*/
 function removeRoll(roll) {
     roll.element.remove();
     cart.delete(roll);

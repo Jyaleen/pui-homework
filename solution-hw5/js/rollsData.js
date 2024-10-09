@@ -24,3 +24,58 @@ const rolls = {
         "imageFile": "strawberry-cinnamon-roll.jpg"
     }
 };
+
+/*
+    The glaze options and their price adaptations
+*/
+const allGlaze = {
+    'Keep Original': 0,
+    'Sugar Milk': 0,
+    'Vanilla Milk': 0.5,
+    'Double Chocolate': 1.5,
+};
+
+/*
+    The pack size options and their price adaptations
+*/
+const allPack = {
+    1: 1,
+    3: 3,
+    6: 5,
+    12: 10,
+};
+
+class Roll {
+    constructor(rollType, rollGlazing, packSize, basePrice) {
+        this.type = rollType;
+        this.glazing = rollGlazing;
+        this.size = packSize;
+        this.basePrice = basePrice;
+    }
+}
+
+const cart = new Set();
+
+/*
+    Adds the roll (with glaze and pack size specifications) to the cart
+*/
+function onAddToCart() {
+    const thisGlaze = document.querySelector('#glazingOptions');
+    const glazeValue = thisGlaze.options[thisGlaze.selectedIndex];
+
+    const thisPack = document.querySelector('#packOptions');
+    const packValue = thisPack.options[thisPack.selectedIndex];
+
+    const glazeText = glazeValue.text;
+    const packText = packValue.text;
+
+    const newCartItem = new Roll(
+        rollType,
+        glazeText,
+        packText,
+        basePrice
+    );
+
+    cart.add(newCartItem);
+    console.log(cart);
+}

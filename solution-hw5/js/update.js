@@ -13,4 +13,4 @@ const rollImage = document.querySelector('#roll-detail-img');
 rollImage.src = "../assets/products/" + selectedRoll.imageFile;
 
 const rollPrice = document.querySelector('#roll-price');
-rollPrice.innerText = "$ " + basePrice;
+rollPrice.innerText = "$ " + selectedRoll["basePrice"];
