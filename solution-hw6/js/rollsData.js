@@ -45,6 +45,12 @@ const allPack = {
     12: 10,
 };
 
+let cart;
+
+if (cart === undefined) {
+    cart = new Set();
+}
+
 class Roll {
     constructor(rollType, rollGlazing, packSize, basePrice) {
         this.type = rollType;
@@ -151,7 +157,6 @@ function displayTotalPrice(total) {
     }
 }
 
-
 /*
     Removes the given roll from the DOM and deletes it from the cart, refreshing the total price
 */
@@ -162,20 +167,27 @@ function removeRoll(roll) {
     saveToLocalStorage();
 }
 
-const cart = new Set();
-
+/*
+    Adds a new roll to the cart with the specified parameters
+*/
 function addNewRoll(rollType, rollGlazing, packSize, basePrice) {
     const roll = new Roll(rollType, rollGlazing, packSize, basePrice);
     cart.add(roll);
     return roll;
 }
 
+/*
+    Saves the cart to local storage
+*/
 function saveToLocalStorage() {
     const cartArray = Array.from(cart);
     const cartArrayString = JSON.stringify(cartArray);
     localStorage.setItem('storedCart', cartArrayString);
 }
 
+/*
+    Retrives the cart from local storage
+*/
 function retrieveFromLocalStorage() {
     const cartArrayString = localStorage.getItem('storedCart');
     const cartArray = JSON.parse(cartArrayString);
@@ -184,7 +196,6 @@ function retrieveFromLocalStorage() {
     };
     getTotalPrice();
 }
-
 
 if (localStorage.getItem('storedCart') !== null) {
     retrieveFromLocalStorage();
