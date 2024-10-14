@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/universal.css">
+    <link rel="stylesheet" type="text/css" href="css/detail.css">
+    <script defer src="js/rollsData.js"></script>
+    <script defer src="js/update.js"></script>
+    <script defer src="js/detail.js"></script>
+    <title>Bun Bun Bake Shop</title>
+</head>
+
+<body>
+    <div class="pagination">
+        <div class="side-by-side">
+            <a href="./index.html">
+                <img class="logo" src="../assets/logo/logo-01.svg" alt="bun bun bake shop logo">
+            </a>
+            <div class="flex-grow">
+                <div class="side-by-side float-right pag-a">
+                    <a href="./index.html">
+                        <h3 class="current-pagination pag">PRODUCTS</h3>
+                    </a>
+                    <br>
+                    <br>
+                    <a href="./cart.html">
+                        <h3 class="other-pagination pag">CART</h3>
+                    </a>
+                </div>
+                <hr>
+                <h2 id="roll-header-text"></h2>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="row">
+        <div class="column detail-left">
+            <img id="roll-detail-img" class="item-thumbnail" src="" alt="Original cinnamon roll">
+        </div>
+        <div class="column detail-right">
+            <div class="item-body">
+                Customize our delicious, hand-made cinammon roll to your liking!
+                <br><br><br><br><br><br><br><br>
+                Glazing:
+                <br>
+                <select class="custom-select" id="glazingOptions">
+
+                </select>
+                <br><br>
+                Pack size:
+                <br>
+                <select class="custom-select" id="packOptions">
+
+                </select>
+                <div class="side-by-side">
+                    <div class="item-price" id="price">
+                        <p id="roll-price"></p>
+                    </div>
+                    <button id="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
