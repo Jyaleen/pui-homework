@@ -55,11 +55,11 @@ Outline weekly milestones to plan your expected implementation progress until th
 
 ### *Implementation Plan*
 
-- [ ] Week 9 Oct 28 \- Nov 1:
+- [X] Week 9 Oct 28 \- Nov 1:
   - [X] FP1 due
   
-- [ ] Week 10 Nov 4 \- Nov 8:   
-  - [ ] FP2 due
+- [X] Week 10 Nov 4 \- Nov 8:   
+  - [X] FP2 due
   - [X] Explore JS libraries
 
 - [ ] Week 11 Nov 11 \- Nov 15:  
@@ -74,6 +74,7 @@ Outline weekly milestones to plan your expected implementation progress until th
 - [ ] Week 13 Nov 25 \- Nov 29:  
   - [ ] Work on third case study page
   - [ ] Thanksgiving  
+
 - [ ] Week 14 Dec 2 \- Dec 6:  
   - [ ] Finishing touches
   - [ ] FP4 due 

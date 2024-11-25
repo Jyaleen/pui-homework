@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+h1 {
+    color: #008cff;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+}
+
+h2 {
+    color: #8f8f8f;
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.hero-image-placeholder {
+    background-color: #ccc;
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 200px;
+    color: #555;
+}
+
+.image-placeholder {
+    background-color: #ccc;
+    width: 60%;
+    height: 600px;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 200px;
+    color: #555;
+}
+
+.side-by-side {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.stack {
+    width: 30%;
+    min-width: 250px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.stack-big {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    color: #838383;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.right-reverse {
+    float: right;
+    display: block;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    color: rgb(0, 55, 144);
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+    color: rgb(0, 98, 255);
+}
