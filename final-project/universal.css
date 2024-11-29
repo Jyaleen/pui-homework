@@ -42,43 +42,48 @@ h2 {
     margin-top: 20px;
 }
 
+.hero-landing {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1000px;
+    margin: 60px auto;
+    padding-top: 100px;
+}
+
+.hero-title {
+    flex: 0 0 55%;
+}
+
+.hero-title h1 {
+    margin: 0%;
+}
+
+.hero-title h2 {
+    font-size: 60px;
+    font-weight: 520;
+    margin-top: 20px;
+    padding-top: 0%;
+}
+
+.hero-title p {
+    font-size: 16px;
+    color: #666;
+}
+
 .hero-image-placeholder {
-    background-color: #ccc;
-    width: 100%;
-    max-width: 400px;
-    height: 200px;
-    margin: 20px auto;
+    width: 30%;
+    margin-right: 50px;
     text-align: center;
-    line-height: 200px;
-    color: #555;
 }
 
 .image-placeholder {
-    background-color: #ccc;
-    width: 60%;
-    height: 600px;
+    width: 50%;
     margin: 20px auto;
     text-align: center;
-    line-height: 200px;
-    color: #555;
-}
-
-.side-by-side {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.stack {
-    width: 30%;
-    min-width: 250px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.stack-big {
-    text-align: center;
-    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 footer {
@@ -91,6 +96,8 @@ footer {
 /* Add a black background color to the top navigation */
 .topnav {
     overflow: hidden;
+    margin-top: 20px;
+    margin-right: 20px;
 }
 
 /* Style the links inside the navigation bar */
@@ -115,4 +122,63 @@ footer {
 /* Add an active class to highlight the current page */
 .topnav a.active {
     color: rgb(0, 98, 255);
+}
+
+
+
+
+
+
+
+
+.case-study-landing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.case-study-title {
+    flex: 0 0 40%;
+}
+
+.case-study-title h1 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.case-study-title p {
+    font-size: 16px;
+    color: #666;
+}
+
+.case-study-description {
+    flex: 0 0 50%;
+    text-align: left;
+}
+
+.case-study-description p {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.view-project {
+    display: inline-block;
+    background-color: #4A90E2;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.view-project:hover {
+    background-color: #3b7ace;
 }
