@@ -1,3 +1,14 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+canvas {
+    display: block;
+}
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -30,6 +41,13 @@ h2 {
     font-family: Arial, sans-serif;
     font-weight: 700;
     font-size: 60px;
+}
+
+.not-to-end {
+    margin: 0 100px;
+    height: 0px;
+    border: none;
+    border-top: 1px solid lightgray;
 }
 
 .hero {
@@ -77,13 +95,19 @@ h2 {
     text-align: center;
 }
 
+#myContainer {
+    width: 30%;
+    margin-right: 50px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
 .image-placeholder {
     width: 50%;
     margin: 20px auto;
+    margin-bottom: 100px;
     text-align: center;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 footer {
@@ -128,9 +152,6 @@ footer {
 
 
 
-
-
-
 .case-study-landing {
     display: flex;
     justify-content: space-between;
@@ -163,19 +184,17 @@ footer {
 
 .case-study-description p {
     font-size: 24px;
-    color: #333;
+    font-weight: lighter;
+    color: gray;
     margin-bottom: 20px;
 }
 
 .view-project {
-    display: inline-block;
-    background-color: #4A90E2;
-    color: #fff;
+    color: darkgray;
     text-decoration: none;
-    padding: 12px 30px;
-    border-radius: 4px;
-    font-weight: 600;
-    font-size: 16px;
+    font-weight: 300;
+    font-size: 20px;
+    color: black;
     transition: background-color 0.3s ease;
 }
 
