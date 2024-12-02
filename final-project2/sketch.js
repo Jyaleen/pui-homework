@@ -10,7 +10,9 @@ let fontChinese;
 let fontsize = 130;
 let opacityValue = 9;
 let brightness = 0;
+let grayScale = true;
 let dotColor = {
+    H: 30,
     Alpha: 0.5,
 };
 let mouseTarget = null;
@@ -18,7 +20,7 @@ let mouseTarget = null;
 const words = [
     "jyaleen",
     "wu",
-    "product",
+    "ui/ux",
     "design",
     "boston",
     "jelly",
@@ -39,6 +41,9 @@ const words = [
     "epic",
     "butter",
     "eggs",
+    "rock",
+    "pencil",
+    "matcha",
     "!",
     "*",
     "⁂",
@@ -55,10 +60,13 @@ const wordsChinese = [
     "吴",
     "嘉",
     "琳",
+    "吴嘉琳",
     "你好",
     "广州",
     "台湾",
     "麻州",
+    "波士顿",
+    "蓝瘦香菇",
 ]
 
 let string = words[0];

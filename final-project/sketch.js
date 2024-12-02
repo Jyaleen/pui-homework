@@ -1,7 +1,8 @@
 function setup() {
     let myCanvas = createCanvas(300, 300);
     myCanvas.parent('myContainer');
-    colorMode(HSB);
+    // colorMode(HSB);
+    colorMode(RGB);
     angleMode(DEGREES);
 }
 

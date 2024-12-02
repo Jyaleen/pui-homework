@@ -1,6 +1,17 @@
 function brush(x, y) {
-    dotColor.S = 0;
-    dotColor.B = brightness;
+    if (grayScale) {
+        dotColor.S = 0;
+        dotColor.B = brightness;
+    } else {
+        dotColor.H = int(random(200, 255));
+        dotColor.S = saturation;
+        dotColor.B = brightness;
+    }
+    // dotColor.H = int(random(0, 255));
+    // dotColor.S = saturation;
+    // dotColor.B = 255;
+    // // dotColor.S = 0;
+    // // dotColor.B = brightness;
     const { H, S, B, Alpha } = dotColor;
 
     stroke(H, S, 30, Alpha);

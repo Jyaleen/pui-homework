@@ -32,10 +32,38 @@ function changeWords() {
 // what happens when the user presses 1-9 (keys 48-57) to change the opacity
 function keyPressed() {
     if (keyCode > 48 && keyCode <= 57) {
-        opacityValue = keyCode - 48;
-        saturation = 255 - (keyCode - 48 - 1) * 28;
-        brightness = 255 - (keyCode - 48 - 1) * 28;
+        if (grayScale) {
+            opacityValue = keyCode - 48;
+            saturation = 255 - (keyCode - 48 - 1) * 28;
+            brightness = 255 - (keyCode - 48 - 1) * 28;
+        }
+        else {
+            opacityValue = keyCode - 48;
+            saturation = 255 - (keyCode - 48 - 1) * 28;
+            brightness = 255 - (keyCode - 48 - 1) * 28;
+        }
     }
+    else if (keyCode == 32) {
+        // space
+        grayScale = !grayScale;
+    }
+    // if (grayscale) {
+    //     if (keyCode > 48 && keyCode <= 57) {
+    //         opacityValue = keyCode - 48;
+    //         saturation = 255 - (keyCode - 48 - 1) * 28;
+    //         brightness = 255 - (keyCode - 48 - 1) * 28;
+    //     }
+    // }
+    // if (!grayscale) {
+    //     if (keyCode > 48 && keyCode <= 57) {
+    //         saturation = 255 - (keyCode - 48 - 1) * 28;
+    //         colorValue = keyCode - 48;
+    //     }
+    // }
+    // if (keyCode == 32) {
+    //     // space
+    //     grayScale = !grayScale;
+    // }
 }
 
 // what happens when the user moves the mouse around the screen
