@@ -1,0 +1,27 @@
+canvas {
+    display: block;
+}
+
+/*
+    slider appearance
+*/
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #E0E0E0;
+    outline: none;
+}
+
+/* 
+    slider inner thing 
+    referred to this for help:
+    https://stackoverflow.com/questions/41609481/trouble-styling-range-input-thumb 
+*/
+input[type="range"]::-webkit-slider-thumb {
+    width: 8px;
+    -webkit-appearance: none;
+    height: 8px;
+    cursor: ew-resize;
+    background: #434343;
+}
