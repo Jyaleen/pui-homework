@@ -25,3 +25,17 @@ input[type="range"]::-webkit-slider-thumb {
     cursor: ew-resize;
     background: #434343;
 }
+
+/* 
+    using a local/custom font
+    referred to this for help:
+    https://stackoverflow.com/questions/107936/how-to-add-some-non-standard-font-to-a-website 
+*/
+@font-face {
+    font-family: 'Engram';
+    src: url('Fontspring-DEMO-engram-regular.otf');
+}
+
+p {
+    font-family: "Engram";
+}

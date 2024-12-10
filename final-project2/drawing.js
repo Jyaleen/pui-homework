@@ -26,9 +26,9 @@ function brush(x, y) {
 }
 
 function drawPoint(points) {
-    if (points) {
-        for (let i = 0; i < points.length; i++) {
-            brush(sizeW * points[i].x, sizeH * points[i].y);
-        }
+
+    for (let i = 0; i < points.length; i++) {
+        brush(sizeW * points[i].x, sizeH * points[i].y);
     }
+
 }

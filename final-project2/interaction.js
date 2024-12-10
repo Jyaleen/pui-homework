@@ -1,4 +1,7 @@
-function mousePressed() {
+// animation starts when mouse is double clicked
+function doubleClicked() {
+    userInput.remove();
+    submitButton.remove();
     loop();
 }
 
@@ -20,13 +23,22 @@ function drawWordChinese() {
     bounds = fontChinese.textBounds(string, 100, 100, fontsize);
 }
 
-//change the words on the screen based on the arrays of english and chinese words
+// if user didn't input words, change the words on the screen based on the 
+// arrays of english and chinese words. otherwise, change the words on the 
+// screen based on the user's input
 function changeWords() {
-    string = words[int(random(0, words.length))];
-    loadFont("A2Z-Faucet-Light.otf");
-    drawWord();
-    string = wordsChinese[int(random(0, words.length - 1))];
-    drawWordChinese();
+    if (userWords.length > 0) {
+        string = words[int(random(0, words.length))];
+        loadFont("A2Z-Faucet-Light.otf");
+        drawWord();
+    }
+    else {
+        string = words[int(random(0, words.length))];
+        loadFont("A2Z-Faucet-Light.otf");
+        drawWord();
+        string = wordsChinese[int(random(0, words.length - 1))];
+        drawWordChinese();
+    }
 }
 
 // what happens when the user presses 1-9 (keys 48-57) to change the opacity
@@ -74,3 +86,15 @@ function mouseMoved() {
     dotSize = mouseY / 50;
     sliderY && sliderY.value(dotSize);
 }
+
+
+
+
+
+// console.log(words);
+
+//     string = words[int(random(0, words.length))];
+//     loadFont("A2Z-Faucet-Light.otf");
+//     drawWord();
+//     string = wordsChinese[int(random(0, words.length - 1))];
+//     drawWordChinese();

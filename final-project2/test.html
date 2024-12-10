@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word List to Array</title>
+</head>
+
+<body>
+    <h1>Word Input to Array</h1>
+    <p>Type words separated by commas, and they'll be stored in an array:</p>
+    <input type="text" id="wordInput" placeholder="Enter words separated by commas" style="width: 300px;">
+    <button onclick="storeWords()">Submit</button>
+    <p id="result"></p>
+
+    <script>
+        function storeWords() {
+            const input = document.getElementById("wordInput").value; // Get user input
+            const wordsArray = input.split(",").map(word => word.trim()); // Split by commas and trim spaces
+            document.getElementById("result").textContent = "Your Array: " + JSON.stringify(wordsArray);
+            console.log("Words Array:", wordsArray); // Display the array in the console
+        }
+    </script>
+</body>
+
+</html>

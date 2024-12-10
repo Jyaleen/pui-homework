@@ -17,7 +17,11 @@ let dotColor = {
 };
 let mouseTarget = null;
 
-const words = [
+//for use if a user wants to input their own words
+let userWords = [];
+
+// words to be displayed on the screen if the user doesn't input anything
+let words = [
     "jyaleen",
     "wu",
     "ui/ux",
@@ -56,6 +60,7 @@ const words = [
     "○",
 ];
 
+// Chinese characters need to go in a separate array because they use a different typeface
 const wordsChinese = [
     "吴",
     "嘉",
@@ -72,12 +77,14 @@ const wordsChinese = [
 let string = words[0];
 
 
+// loads the fonts
 function preload() {
     // fonts from A2Z Foundry and Google Fonts
     font = loadFont("A2Z-Faucet-Light.otf");
     fontChinese = loadFont("NotoSansSC-VariableFont_wght.ttf");
 }
 
+// initializes the canvas, sets color modes, draws initial words, and sets intervals for changing words.
 function setup() {
     createCanvas(windowWidth, windowHeight);
     colorMode(HSB, 255, 255, 255, 1);
@@ -90,15 +97,27 @@ function setup() {
 let frame = 0;
 let framelength = 5;
 
+// updates the frame and displays instructions on the screen.
 function draw() {
     if (frame === 0) {
         frame--;
         textAlign(CENTER);
         textSize(30);
+        fill(0, 0, 50, 0.5);
+        text("DIRECTIONS", width / 2, height / 2 - 260);
         fill(0, 0, 50, 0.3);
-        text("move mouse around screen to change", width / 2, height / 2 - 30);
-        text("click screen to start", width / 2, height / 2 + 30);
-        textAlign(LEFT);
+        text("move your mouse around the screen to change the visuals", width / 2, height / 2 - 200);
+        text("the x axis controls how dispersed the dots are, and", width / 2, height / 2 - 150);
+        text("the y axis controls how dark the dots are", width / 2, height / 2 - 100);
+        text("if you’d like, you may enter your own list of words below", width / 2, height / 2);
+        text("otherwise, the words will come from a pre-generated list", width / 2, height / 2 + 50);
+        text("use at least 10 words and separate each word with a comma", width / 2, height / 2 + 100);
+        userInput = createInput('');
+        submitButton = createButton('enter');
+        userInput.position(width / 2 - (userInput.width + submitButton.width) / 2, height / 2 + 150);
+        submitButton.position(userInput.x + userInput.width, height / 2 + 150);
+        submitButton.mousePressed(submitUserWords);
+        text("double click screen to start", width / 2, height / 2 + 250);
         return;
     }
 
@@ -116,4 +135,11 @@ function draw() {
     drawPoint(points);
     pop();
     drawLeft();
+}
+
+// splits the user input into an array of words
+function submitUserWords() {
+    userText = userInput.value();
+    userWords = userText.split(", ");
+    words = userWords;
 }

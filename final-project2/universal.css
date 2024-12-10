@@ -1,0 +1,203 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+canvas {
+    display: block;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+h1 {
+    color: #008cff;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+}
+
+h2 {
+    color: #8f8f8f;
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+}
+
+.not-to-end {
+    margin: 0 100px;
+    height: 0px;
+    border: none;
+    border-top: 1px solid lightgray;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.hero-landing {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1000px;
+    margin: 60px auto;
+    padding-top: 100px;
+}
+
+.hero-title {
+    flex: 0 0 55%;
+}
+
+.hero-title h1 {
+    margin: 0%;
+}
+
+.hero-title h2 {
+    font-size: 60px;
+    font-weight: 520;
+    margin-top: 20px;
+    padding-top: 0%;
+}
+
+.hero-title p {
+    font-size: 16px;
+    color: #666;
+}
+
+.hero-image-placeholder {
+    width: 30%;
+    margin-right: 50px;
+    text-align: center;
+}
+
+#myContainer {
+    width: 30%;
+    margin-right: 50px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.image-placeholder {
+    width: 50%;
+    margin: 20px auto;
+    margin-bottom: 100px;
+    text-align: center;
+    display: block;
+}
+
+footer {
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+    overflow: hidden;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    color: #838383;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.right-reverse {
+    float: right;
+    display: block;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    color: rgb(0, 55, 144);
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+    color: rgb(0, 98, 255);
+}
+
+
+
+
+
+.case-study-landing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.case-study-title {
+    flex: 0 0 40%;
+}
+
+.case-study-title h1 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.case-study-title p {
+    font-size: 16px;
+    color: #666;
+}
+
+.case-study-description {
+    flex: 0 0 50%;
+    text-align: left;
+}
+
+.case-study-description p {
+    font-size: 24px;
+    font-weight: lighter;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.view-project {
+    color: darkgray;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 20px;
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+.view-project:hover {
+    background-color: #3b7ace;
+}
