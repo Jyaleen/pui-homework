@@ -14,7 +14,7 @@ function drawHelp() {
 
     modalButton.mousePressed(modalButtonClicked)
     updateModal(`Move your mouse around the screen to change the visuals.<br><br>
-The x axis controls how dispersed the dots are. <br><br> The y axis controls how dark the dots are. <br><br> Press 1-9 on your keyboard to change the opacity.<br><br>`)
+The x axis controls how dispersed the dots are. <br><br> The y axis controls how dark the dots are. <br><br> Press 1-9 on your keyboard to change the opacity.<br><br>Press space on your keyboard to change between gray and color. <br><br>`)
 }
 
 function modalButtonClicked() {

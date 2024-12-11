@@ -2,6 +2,8 @@
 function doubleClicked() {
     userInputLabel = select('#user-input-label');
     userInputLabel.elt.style.display = 'none';
+    userInput = select('#user-input');
+    userInput.elt.style.display = 'none';
     userInput.remove();
     submitButton.remove();
     loop();

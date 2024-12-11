@@ -4,17 +4,7 @@ const yDistance = 20;
 
 //draw the UI on the left side of the screen
 function drawLeft() {
-    //create the sliders that show where the user's mouse is on the screen
-    textSize(15);
-    textStyle(BOLD);
-    text("mouse location", 5, yDistance * 1.8);
-    textStyle(NORMAL);
-    fill(0, 0, 50, 0.15);
-    text("close", 5, yDistance * 3);
-    text("light", 5, yDistance * 4);
-    text("far", 160, yDistance * 3);
-    text("dark", 160, yDistance * 4);
-
+    // create the sliders that show where the user's mouse is on the screen
     sliderX = createSlider(0, 16, dotDistance, 0);
     sliderX.position(55, yDistance * 3);
 
@@ -26,7 +16,21 @@ function drawLeft() {
     sliderX.addClass("slider");
     sliderY.addClass("slider");
 
-    //write the text on the screen that says what the color value is and the direction to move your mouse around the screen
+    writeDetails();
+}
+
+//write text for the sliders that show where the user's mouse is on the screen
+//write the text on the screen that says what the color value is and the direction to move your mouse around the screen
+function writeDetails() {
+    textSize(15);
+    textStyle(BOLD);
+    text("dot details", 5, yDistance * 1.8);
+    textStyle(NORMAL);
+    fill(0, 0, 50, 0.15);
+    text("close", 5, yDistance * 3);
+    text("small", 5, yDistance * 4);
+    text("scattered", 160, yDistance * 3);
+    text("large", 160, yDistance * 4);
 
     textSize(15);
     textStyle(BOLD);

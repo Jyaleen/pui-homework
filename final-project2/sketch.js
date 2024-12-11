@@ -103,19 +103,8 @@ function draw() {
         frame--;
         helpButton = select('#help-button');
         helpButton.elt.style.display = 'none';
-        textAlign(CENTER);
-        textSize(30);
-        fill(0, 0, 50, 0.5);
-        text("DIRECTIONS", width / 2, height / 2 - 260);
-        fill(0, 0, 50, 0.3);
-        text("move your mouse around the screen to change the visuals", width / 2, height / 2 - 200);
-        text("the x axis controls how dispersed the dots are, and", width / 2, height / 2 - 150);
-        text("the y axis controls how dark the dots are", width / 2, height / 2 - 100);
-        text("press 1-9 on your keyboard to change the opacity", width / 2, height / 2 - 50);
-        text("if you’d like, you may enter your own list of words below", width / 2, height / 2 + 50);
-        text("otherwise, the words will come from a pre-generated list", width / 2, height / 2 + 100);
-        text("use at least 10 words and separate each word with a comma", width / 2, height / 2 + 150);
-        describeElement('userInput', 'A yellow circle in the top-left corner.');
+        drawDirections();
+        // used this for reference: https://www.youtube.com/watch?v=BPcL8TfVU1w&t=287s
         userInput = select('#user-input');
         userInputLabel = select('#user-input-label');
         submitButton = select('#submit-button');
@@ -151,4 +140,22 @@ function submitUserWords() {
     userWords = userText.split(", ");
     words = userWords;
     doubleClicked();
+}
+
+// write the text directions on the screen
+function drawDirections() {
+    textAlign(CENTER);
+    textSize(30);
+    fill(0, 0, 50, 0.5);
+    text("DIRECTIONS", width / 2, height / 2 - 310);
+    fill(0, 0, 50, 0.3);
+    text("move your mouse around the screen to change the visuals.", width / 2, height / 2 - 250);
+    text("the x axis controls how dispersed the dots are, and", width / 2, height / 2 - 200);
+    text("the y axis controls how dark the dots are.", width / 2, height / 2 - 150);
+    text("press 1-9 on your keyboard to change the opacity.", width / 2, height / 2 - 100);
+    text("press space on your keyboard to change from gray to color.", width / 2, height / 2 - 50);
+    text("if you’d like, you may enter your own list of words below.", width / 2, height / 2 + 50);
+    text("otherwise, the words will come from a pre-generated list.", width / 2, height / 2 + 100);
+    text("use at least 10 words and separate each word with a comma.", width / 2, height / 2 + 150);
+
 }
