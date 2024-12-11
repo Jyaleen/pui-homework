@@ -109,15 +109,17 @@ function draw() {
         text("move your mouse around the screen to change the visuals", width / 2, height / 2 - 200);
         text("the x axis controls how dispersed the dots are, and", width / 2, height / 2 - 150);
         text("the y axis controls how dark the dots are", width / 2, height / 2 - 100);
-        text("if you’d like, you may enter your own list of words below", width / 2, height / 2);
-        text("otherwise, the words will come from a pre-generated list", width / 2, height / 2 + 50);
-        text("use at least 10 words and separate each word with a comma", width / 2, height / 2 + 100);
+        text("press 1-9 on your keyboard to change the opacity", width / 2, height / 2 - 50);
+        text("if you’d like, you may enter your own list of words below", width / 2, height / 2 + 50);
+        text("otherwise, the words will come from a pre-generated list", width / 2, height / 2 + 100);
+        text("use at least 10 words and separate each word with a comma", width / 2, height / 2 + 150);
         userInput = createInput('');
         submitButton = createButton('enter');
-        userInput.position(width / 2 - (userInput.width + submitButton.width) / 2, height / 2 + 150);
-        submitButton.position(userInput.x + userInput.width, height / 2 + 150);
+        userInput.position(width / 2 - (userInput.width + submitButton.width) / 2, height / 2 + 200);
+        submitButton.position(userInput.x + userInput.width, height / 2 + 200);
         submitButton.mousePressed(submitUserWords);
-        text("double click screen to start", width / 2, height / 2 + 250);
+        text("double click screen to start", width / 2, height / 2 + 300);
+        textAlign(LEFT);
         return;
     }
 
@@ -135,6 +137,7 @@ function draw() {
     drawPoint(points);
     pop();
     drawLeft();
+    drawHelp();
 }
 
 // splits the user input into an array of words

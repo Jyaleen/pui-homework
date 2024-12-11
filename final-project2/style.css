@@ -32,10 +32,10 @@ input[type="range"]::-webkit-slider-thumb {
     https://stackoverflow.com/questions/107936/how-to-add-some-non-standard-font-to-a-website 
 */
 @font-face {
-    font-family: 'Engram';
-    src: url('Fontspring-DEMO-engram-regular.otf');
+    font-family: 'Faucet';
+    src: url('A2Z-Faucet-Light.otf');
 }
 
-p {
-    font-family: "Engram";
-}
+/* p {
+    font-family: "Faucet";
+} */

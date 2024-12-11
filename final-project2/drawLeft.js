@@ -10,14 +10,16 @@ function drawLeft() {
     text("mouse location", 5, yDistance * 1.8);
     textStyle(NORMAL);
     fill(0, 0, 50, 0.15);
-    text("X", 5, yDistance * 3);
-    text("Y", 5, yDistance * 4);
+    text("close", 5, yDistance * 3);
+    text("light", 5, yDistance * 4);
+    text("far", 160, yDistance * 3);
+    text("dark", 160, yDistance * 4);
 
     sliderX = createSlider(0, 16, dotDistance, 0);
-    sliderX.position(30, yDistance * 3);
+    sliderX.position(55, yDistance * 3);
 
     sliderY = createSlider(0, 16, dotSize, 0);
-    sliderY.position(30, yDistance * 4);
+    sliderY.position(55, yDistance * 4);
 
     sliderX.style("width", "100px");
     sliderY.style("width", "100px");
@@ -32,5 +34,4 @@ function drawLeft() {
     textStyle(NORMAL);
     fill(0, 0, 50, 0.15);
     text("press 1-9 on keyboard to change", 5, yDistance * 8.2);
-    pop();
 }

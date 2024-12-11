@@ -5,7 +5,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/addons/p5.sound.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="stylesheet" type="text/css" href="universal.css" />
+    <link rel="stylesheet" type="text/css" href="helpmodal.css" />
     <meta charset="utf-8" />
 
 </head>
@@ -16,7 +16,19 @@
         <script src="drawing.js"></script>
         <script src="interaction.js"></script>
         <script src="drawLeft.js"></script>
+        <script src="drawHelp.js"></script>
     </main>
+    <div class="modal-wrapper">
+        <div class="modal-background"></div>
+        <div class="modal">
+            <h1 id="modal-title"></h1>
+            <p id="modal-description"></p>
+            <button id="modal-button">Ok</button>
+        </div>
+    </div>
+    <div class="help-button">
+        <button id="help-button">View Directions</button>
+    </div>
 
     <!-- 
     <hr class="not-to-end">
