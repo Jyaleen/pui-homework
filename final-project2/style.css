@@ -39,3 +39,18 @@ input[type="range"]::-webkit-slider-thumb {
 /* p {
     font-family: "Faucet";
 } */
+
+#user-input {
+    padding: 10px 20px;
+}
+
+button {
+    background-color: #f1f1f1;
+    color: black;
+    border: 2px solid darkgray;
+    padding: 10px 20px;
+}
+
+button:hover {
+    box-shadow: 0 7px 12px 0 rgba(0, 0, 0, 0.15), 0 10px 20px 0 rgba(0, 0, 0, 0.12);
+}

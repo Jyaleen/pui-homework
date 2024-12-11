@@ -1,5 +1,7 @@
 // animation starts when mouse is double clicked
 function doubleClicked() {
+    userInputLabel = select('#user-input-label');
+    userInputLabel.elt.style.display = 'none';
     userInput.remove();
     submitButton.remove();
     loop();

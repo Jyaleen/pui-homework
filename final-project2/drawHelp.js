@@ -1,4 +1,3 @@
-let isModalVisible = false;
 let modal = null
 let modalButton, modalTitle, modalDescription;
 
@@ -8,7 +7,7 @@ function drawHelp() {
     modalTitle = select('#modal-title')
     modalDescription = select('#modal-description')
     helpButton = select('#help-button');
-
+    helpButton.elt.style.display = 'flex';
 
     helpButton.position(40, yDistance * 10);
     helpButton.mousePressed(showModal);
@@ -24,16 +23,14 @@ function modalButtonClicked() {
 
 function updateModal(title, description) {
     modalTitle.elt.innerHTML = title;
-    modalDescription.elt.innerHTML = description
+    modalDescription.elt.innerHTML = description;
 
 }
 
 function showModal() {
-    isModalVisible = true;
-    modal.elt.style.display = 'flex'
+    modal.elt.style.display = 'flex';
 }
 
 function hideModal() {
-    isModalVisible = false;
-    modal.elt.style.display = 'none'
+    modal.elt.style.display = 'none';
 }

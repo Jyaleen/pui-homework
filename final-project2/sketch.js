@@ -101,6 +101,8 @@ let framelength = 5;
 function draw() {
     if (frame === 0) {
         frame--;
+        helpButton = select('#help-button');
+        helpButton.elt.style.display = 'none';
         textAlign(CENTER);
         textSize(30);
         fill(0, 0, 50, 0.5);
@@ -113,8 +115,11 @@ function draw() {
         text("if you’d like, you may enter your own list of words below", width / 2, height / 2 + 50);
         text("otherwise, the words will come from a pre-generated list", width / 2, height / 2 + 100);
         text("use at least 10 words and separate each word with a comma", width / 2, height / 2 + 150);
-        userInput = createInput('');
-        submitButton = createButton('enter');
+        describeElement('userInput', 'A yellow circle in the top-left corner.');
+        userInput = select('#user-input');
+        userInputLabel = select('#user-input-label');
+        submitButton = select('#submit-button');
+        userInputLabel.position(width / 2 - (userInput.width + submitButton.width) / 2, height / 2 + 200);
         userInput.position(width / 2 - (userInput.width + submitButton.width) / 2, height / 2 + 200);
         submitButton.position(userInput.x + userInput.width, height / 2 + 200);
         submitButton.mousePressed(submitUserWords);
@@ -145,4 +150,5 @@ function submitUserWords() {
     userText = userInput.value();
     userWords = userText.split(", ");
     words = userWords;
+    doubleClicked();
 }
