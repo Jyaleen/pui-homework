@@ -157,5 +157,4 @@ function drawDirections() {
     text("if you’d like, you may enter your own list of words below.", width / 2, height / 2 + 50);
     text("otherwise, the words will come from a pre-generated list.", width / 2, height / 2 + 100);
     text("use at least 10 words and separate each word with a comma.", width / 2, height / 2 + 150);
-
 }

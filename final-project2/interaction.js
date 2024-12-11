@@ -63,23 +63,6 @@ function keyPressed() {
         // space
         grayScale = !grayScale;
     }
-    // if (grayscale) {
-    //     if (keyCode > 48 && keyCode <= 57) {
-    //         opacityValue = keyCode - 48;
-    //         saturation = 255 - (keyCode - 48 - 1) * 28;
-    //         brightness = 255 - (keyCode - 48 - 1) * 28;
-    //     }
-    // }
-    // if (!grayscale) {
-    //     if (keyCode > 48 && keyCode <= 57) {
-    //         saturation = 255 - (keyCode - 48 - 1) * 28;
-    //         colorValue = keyCode - 48;
-    //     }
-    // }
-    // if (keyCode == 32) {
-    //     // space
-    //     grayScale = !grayScale;
-    // }
 }
 
 // what happens when the user moves the mouse around the screen
@@ -90,15 +73,3 @@ function mouseMoved() {
     dotSize = mouseY / 50;
     sliderY && sliderY.value(dotSize);
 }
-
-
-
-
-
-// console.log(words);
-
-//     string = words[int(random(0, words.length))];
-//     loadFont("A2Z-Faucet-Light.otf");
-//     drawWord();
-//     string = wordsChinese[int(random(0, words.length - 1))];
-//     drawWordChinese();

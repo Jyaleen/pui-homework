@@ -1,3 +1,4 @@
+// draw dots around the given x,y coordinates using random Gaussian distribution for position and size
 function brush(x, y) {
     if (grayScale) {
         dotColor.S = 0;
@@ -7,11 +8,6 @@ function brush(x, y) {
         dotColor.S = saturation;
         dotColor.B = brightness;
     }
-    // dotColor.H = int(random(0, 255));
-    // dotColor.S = saturation;
-    // dotColor.B = 255;
-    // // dotColor.S = 0;
-    // // dotColor.B = brightness;
     const { H, S, B, Alpha } = dotColor;
 
     stroke(H, S, 30, Alpha);
@@ -25,6 +21,7 @@ function brush(x, y) {
     }
 }
 
+// takes an array of points and draws them
 function drawPoint(points) {
     for (let i = 0; i < points.length; i++) {
         brush(sizeW * points[i].x, sizeH * points[i].y);
