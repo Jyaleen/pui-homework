@@ -13,7 +13,7 @@ function drawHelp() {
     helpButton.mousePressed(showModal);
 
     modalButton.mousePressed(modalButtonClicked)
-    updateModal("DIRECTIONS", `Move your mouse around the screen to change the visuals.<br><br>
+    updateModal(`Move your mouse around the screen to change the visuals.<br><br>
 The x axis controls how dispersed the dots are. <br><br> The y axis controls how dark the dots are. <br><br> Press 1-9 on your keyboard to change the opacity.<br><br>`)
 }
 
@@ -21,10 +21,8 @@ function modalButtonClicked() {
     hideModal()
 }
 
-function updateModal(title, description) {
-    modalTitle.elt.innerHTML = title;
+function updateModal(description) {
     modalDescription.elt.innerHTML = description;
-
 }
 
 function showModal() {

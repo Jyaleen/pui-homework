@@ -36,10 +36,6 @@ input[type="range"]::-webkit-slider-thumb {
     src: url('A2Z-Faucet-Light.otf');
 }
 
-/* p {
-    font-family: "Faucet";
-} */
-
 #user-input {
     padding: 10px 20px;
 }
