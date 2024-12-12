@@ -142,7 +142,7 @@ Directions screen:
 
 Words screen:
 ![WAVE summary of words page](images/words-screen-summary.png)
-![WAVE detauils of words page](images/words-screen-details.png)
+![WAVE details of words page](images/words-screen-details.png)
 
 
 

@@ -33,7 +33,7 @@ input[type="range"]::-webkit-slider-thumb {
 */
 @font-face {
     font-family: 'Faucet';
-    src: url('A2Z-Faucet-Light.otf');
+    src: url('fonts/A2Z-Faucet-Light.otf');
 }
 
 #user-input {

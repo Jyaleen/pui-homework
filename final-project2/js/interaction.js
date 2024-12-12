@@ -33,12 +33,12 @@ function drawWordChinese() {
 function changeWords() {
     if (userWords.length > 0) {
         string = words[int(random(0, words.length))];
-        loadFont("A2Z-Faucet-Light.otf");
+        loadFont("fonts/A2Z-Faucet-Light.otf");
         drawWord();
     }
     else {
         string = words[int(random(0, words.length))];
-        loadFont("A2Z-Faucet-Light.otf");
+        loadFont("fonts/A2Z-Faucet-Light.otf");
         drawWord();
         string = wordsChinese[int(random(0, words.length - 1))];
         drawWordChinese();

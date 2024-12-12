@@ -80,8 +80,8 @@ let string = words[0];
 // loads the fonts
 function preload() {
     // fonts from A2Z Foundry and Google Fonts
-    font = loadFont("A2Z-Faucet-Light.otf");
-    fontChinese = loadFont("NotoSansSC-VariableFont_wght.ttf");
+    font = loadFont("fonts/A2Z-Faucet-Light.otf");
+    fontChinese = loadFont("fonts/NotoSansSC-VariableFont_wght.ttf");
 }
 
 // initializes the canvas, sets color modes, draws initial words, and sets intervals for changing words.
